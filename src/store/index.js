@@ -1,10 +1,10 @@
 import { createStore } from "vuex";
-import storedData from "./data/data.js";
+// import storedData from "./data/data.js";
 
 const store = createStore({
   state() {
     return {
-      storedData,
+      showContent: false,
     };
   },
 });
