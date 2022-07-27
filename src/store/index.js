@@ -5,6 +5,7 @@ const store = createStore({
   state() {
     return {
       showContent: false,
+      isNight: false,
     };
   },
 });

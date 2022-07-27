@@ -1,5 +1,5 @@
 <template>
-  <the-header></the-header>
+  <the-header :show="showContent"></the-header>
 
   <router-view v-slot="{ Component }" v-if="showContent">
     <transition name="fade" mode="out-in">
@@ -7,7 +7,7 @@
     </transition>
   </router-view>
 
-  <the-footer></the-footer>
+  <the-footer :mode="isNight" :show="showContent"></the-footer>
   <h2>{{ test }}</h2>
 </template>
 <script>
@@ -19,6 +19,9 @@ export default {
   computed: {
     showContent() {
       return this.$store.state.showContent;
+    },
+    isNight() {
+      return this.$store.state.isNight;
     },
   },
 };

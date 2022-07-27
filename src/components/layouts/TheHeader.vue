@@ -5,7 +5,7 @@
       <h1>Maksym Matsydulskas</h1>
     </section>
 
-    <section v-if="showContent">
+    <section v-if="show">
       <router-link to="/about">Home</router-link>
       <router-link to="/education">Education</router-link>
       <router-link to="/job">Job Expirience</router-link>
@@ -16,11 +16,7 @@
 </template>
 <script>
 export default {
-  computed: {
-    showContent() {
-      return this.$store.state.showContent;
-    },
-  },
+  props: ["show"],
 };
 </script>
 <style scoped>
@@ -35,7 +31,7 @@ header h1 {
   width: 100vw;
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
-  padding-left: 14rem;
+  padding-left: 14.25rem;
 }
 img {
   max-width: 12.5rem;

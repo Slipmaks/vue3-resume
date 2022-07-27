@@ -1,16 +1,12 @@
 <template>
-  <section v-if="showContent">
+  <section v-if="show">
     <p>created with Vue3, vue-router, vuex4</p>
   </section>
 </template>
 
 <script>
 export default {
-  computed: {
-    showContent() {
-      return this.$store.state.showContent;
-    },
-  },
+  props: ["show"],
 };
 </script>
 <style scoped></style>
