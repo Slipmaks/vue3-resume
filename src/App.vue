@@ -46,6 +46,7 @@ body {
   background-color: var(--main-color);
   font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans,
     Helvetica Neue, Arial, sans-serif;
+  color: var(--text-color);
 }
 .fade-enter-active,
 .fade-leave-active {

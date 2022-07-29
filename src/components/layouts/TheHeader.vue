@@ -1,9 +1,12 @@
 <template>
   <header>
     <div class="bg">
-      <section class="logo">
-        <img src="../../assets/photo.jpg" alt="photo" />
-        <h1>Maksym Matsydulskas</h1>
+      <section class="header">
+        <div class="plank"></div>
+        <section class="logo">
+          <img src="../../assets/photo.jpg" alt="photo" />
+          <h1>Maksym Matsydulskas</h1>
+        </section>
 
         <section v-if="show" class="router-links">
           <router-link to="/about" class="router-link">Home</router-link>
@@ -28,37 +31,42 @@ export default {
 };
 </script>
 <style scoped>
-header {
-  position: relative;
-  display: flex;
-}
-header h1 {
-  color: var(--links-bg);
-  position: absolute;
-  z-index: 1;
-  background-color: var(--secondary-color);
-  width: 100vw;
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
-  padding-left: 15.25rem;
-  opacity: 0.8;
-}
-.logo img {
+.header img {
   max-width: 12.5rem;
   border-radius: 50%;
-  z-index: 2;
   margin-left: 2rem;
 }
+.header,
 .logo {
   display: flex;
   align-items: center;
   gap: 1rem;
+  z-index: 1;
 }
-.router-links {
-  z-index: 2;
-  justify-self: flex-end;
+.logo h1 {
+  color: var(--text-color);
+  font-weight: 800;
+  font-size: 2rem;
+}
+.header {
+  justify-content: space-between;
+}
+.plank {
+  background-color: var(--secondary-color);
+  height: 8.5rem;
+  opacity: 0.8;
+  width: 100%;
   position: absolute;
-  right: 0;
+  z-index: 0;
+  background: url("../../assets/bg.png") no-repeat center;
+  background-size: cover;
+  filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.router-links {
+  z-index: 1;
   margin-right: 2rem;
 }
 .router-link {
@@ -82,9 +90,8 @@ header h1 {
 }
 .bg {
   width: 100%;
-  background: url("../../assets/bg.png") no-repeat;
+  background: url("../../assets/bg.png") no-repeat center;
   background-size: cover;
-  z-index: 1;
   padding: 2rem 0;
 }
 </style>
