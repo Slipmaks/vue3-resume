@@ -9,7 +9,7 @@
   padding: 2rem;
   border: 1px rgb(231, 231, 231) solid;
   overflow: hidden;
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
   color: var(--text-color);
 }
 </style>

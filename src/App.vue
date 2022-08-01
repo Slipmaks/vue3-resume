@@ -29,11 +29,11 @@ export default {
 <style>
 :root {
   --links-text: #888888;
-  --links-active: #00adb5;
-  --links-bg: #393e46;
+  --links-active: #4fd89a;
+  --links-bg: #34495e;
   --main-color: #ffffff;
   --secondary-color: #eeeeee;
-  --text-color: #393e46;
+  --text-color: #213547;
   --night-main: ;
   --night-secoundary: ;
 }
@@ -50,11 +50,15 @@ body {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 0.3s ease-in;
+  transition: all 0.15s ease-in;
 }
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+.icon {
+  max-width: 1.25rem;
+  margin: auto 0.5rem;
 }
 h1,
 h2,
@@ -63,5 +67,17 @@ h4,
 h5,
 h6 {
   font-family: "Inter", sans-serif;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+ul {
+  list-style: none;
 }
 </style>

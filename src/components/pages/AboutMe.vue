@@ -2,16 +2,24 @@
   <main-wrapper>
     <h2>About</h2>
     <section>
-      <h3>Details</h3>
-      <p><strong>Lication:</strong> Dnipro, Ukraine</p>
-      <p>
-        <strong>Mail:</strong>
-        <a href="mailto:slipmaks@gmail.com"> slipmaks@gmail.com</a>
-      </p>
-      <p><strong>Age:</strong> 27</p>
-      <h3>Contact:</h3>
-      <p><strong>Social:</strong> telegramm, viber</p>
-      <p>github</p>
+      <h4>Lication:</h4>
+      <p>Dnipro, Ukraine</p>
+
+      <h4>Mail:</h4>
+      <a href="mailto:slipmaks@gmail.com"> slipmaks@gmail.com</a>
+      <h4>Age:</h4>
+      <p>27</p>
+      <h4>Social:</h4>
+      <a href="">
+        <img src="../../assets/svg/telegram.svg" alt="telegram" class="icon" />
+      </a>
+      <a href="">
+        <img src="../../assets/svg/viber.svg" alt="viber" class="icon" />
+      </a>
+
+      <a href="">
+        <img src="../../assets/svg/github.svg" alt="github" class="icon" />
+      </a>
     </section>
     <section>
       <h3>Profile</h3>
@@ -22,9 +30,18 @@
     </section>
     <section>
       <h3>Languages</h3>
-      <p>ukrainian</p>
-      <p>english</p>
-      <p>russian</p>
+      <ul>
+        <li v-for="lang in languages" :key="lang">{{ lang }}</li>
+      </ul>
     </section>
   </main-wrapper>
 </template>
+<script>
+export default {
+  computed: {
+    languages() {
+      return this.$store.getters.languages;
+    },
+  },
+};
+</script>

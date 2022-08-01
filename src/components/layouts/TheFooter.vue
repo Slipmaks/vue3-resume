@@ -11,11 +11,6 @@ export default {
 </script>
 <style scoped>
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 1rem auto;
   text-align: center;
 }
 </style>

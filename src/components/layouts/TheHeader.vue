@@ -44,7 +44,10 @@ export default {
   z-index: 1;
 }
 .logo h1 {
-  color: var(--text-color);
+  background: -webkit-linear-gradient(315deg, #4afcac 25%, #00ccff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 800;
   font-size: 2rem;
 }
@@ -58,7 +61,7 @@ export default {
   width: 100%;
   position: absolute;
   z-index: 0;
-  background: url("../../assets/bg.png") no-repeat center;
+  background: url("../../assets/vue-js-kk.jpg") no-repeat center;
   background-size: cover;
   filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -78,7 +81,7 @@ export default {
   border: 1px var(--links-text) solid;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .router-link:hover {
   color: var(--links-active);
@@ -90,7 +93,7 @@ export default {
 }
 .bg {
   width: 100%;
-  background: url("../../assets/bg.png") no-repeat center;
+  background: url("../../assets/vue-js-kk.jpg") no-repeat center;
   background-size: cover;
   padding: 2rem 0;
 }
