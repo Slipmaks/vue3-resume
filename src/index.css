@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --links-text: #c5c5c5;
+  --links-active: #4fd89a;
+  --links-bg: #34495e;
+  --main-color: #ffffff;
+  --secondary-color: #eeeeee;
+  --text-color: #213547;
+  --night-main: ;
+  --night-secoundary: ;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--main-color);
+  font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans,
+    Helvetica Neue, Arial, sans-serif;
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+ul {
+  list-style: none;
+}

@@ -8,7 +8,7 @@
           <h1>Maksym Matsydulskas</h1>
         </section>
 
-        <section v-if="show" class="router-links">
+        <section v-if="show" class="router-links mobile-menu">
           <router-link to="/about" class="router-link">Home</router-link>
           <router-link to="/education" class="router-link"
             >Education</router-link
@@ -27,10 +27,17 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      open: false,
+    };
+  },
   props: ["show"],
 };
 </script>
 <style scoped>
+.mobile-menu {
+}
 .header img {
   max-width: 12.5rem;
   border-radius: 50%;
@@ -43,6 +50,7 @@ export default {
   gap: 1rem;
   z-index: 1;
 }
+
 .logo h1 {
   background: -webkit-linear-gradient(315deg, #4afcac 25%, #00ccff);
   background-clip: text;
@@ -96,5 +104,23 @@ export default {
   background: url("../../assets/vue-js-kk.jpg") no-repeat center;
   background-size: cover;
   padding: 2rem 0;
+}
+@media screen and (min-width: 320px) and (max-width: 1400px) {
+  .header img {
+    max-width: 8rem;
+  }
+  .header {
+    height: 240px;
+    align-content: center;
+  }
+  .plank {
+    height: 240px;
+  }
+  .router-links {
+    position: absolute;
+    right: -300px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>
